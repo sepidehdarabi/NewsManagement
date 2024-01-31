@@ -1,0 +1,396 @@
+﻿:root {
+    --green: #188cb9;
+    --lowgreen: #7bc4e1;
+    --black: #151f36;
+    --gray: #ededed;
+    --darkgrey: #8e8e8e;
+    --litegreen: #528697;
+}
+/* ابتدا استایل عمومی برای screen-wrapper center را اعمال کنید */
+.screen-area {
+    width: 100%; /* یا اندازه دلخواه خودتان */
+    height: 100%; /* یا ارتفاع دلخواه خودتان */
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-summery ul li .info {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.scroll-to-top-btn{
+    display:none
+}
+@media screen and (max-width: 800px) {
+    .screen-area {
+        width: 100%; /* یا اندازه دلخواه خودتان */
+        height: 100%; /* یا ارتفاع دلخواه خودتان */
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        margin-top: 50px;
+    }
+    .screen-wrapper  {
+        margin-bottom: 10px;
+    }
+    .screen-thumb img {
+        text-align: center;
+        width: 100%;
+        height: 100%
+    }
+
+}
+
+.screen-thumb{
+    text-align:center;
+    width:100%
+}
+
+.screen-thumb img {
+    text-align: center;
+}
+.center {
+    text-align: center;
+}
+#Payment {
+    background-color: var(--black);
+    color: var(--gray);
+    border: 1px solid var(--black);
+    margin: 10px;
+}
+    #Payment:disabled,
+    #Payment[disabled] {
+        background-color: var(--darkgrey);
+        color: var(--black);
+    }
+.btn-primary {
+    color: #fff;
+    background-color: var(--black);
+    border-color: var(--black);
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: var(--green);
+        border-color: #0062cc
+    }
+
+    .btn-primary.focus, .btn-primary:focus {
+        box-shadow: 0 0 0 .2rem rgba(38,143,255,.5)
+    }
+
+    .btn-primary.disabled, .btn-primary:disabled {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff
+    }
+
+    .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #005cbf
+    }
+
+        .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .2rem rgba(38,143,255,.5)
+        }
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.seat-area {
+    margin-bottom: 25px;
+    margin-top: -5px;
+}
+
+@media (min-width: 576px) {
+    .seat-area {
+        margin-bottom: 55px;
+    }
+}
+
+.seat-area .seat-line {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0;
+}
+
+    .seat-area .seat-line > span {
+        width: 20px;
+    }
+
+        .seat-area .seat-line > span:last-child {
+            text-align: right;
+        }
+
+    .seat-area .seat-line ul {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+        .seat-area .seat-line ul .front-seat {
+            padding: 0;
+        }
+
+            .seat-area .seat-line ul .front-seat ul li {
+                padding: 5px;
+            }
+
+        .seat-area .seat-line ul.seat--area {
+            width: calc(100% - 60px);
+        }
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .seat-area .seat-line .single-seat {
+        width: 22px;
+        padding: 2px !important;
+    }
+
+        .seat-area .seat-line .single-seat img {
+            width: 100%;
+        }
+}
+
+.seat-area.couple {
+    margin-top: -10px;
+    margin-bottom: 70px;
+}
+
+@media (min-width: 992px) {
+    .seat-area.couple {
+        margin-bottom: 110px;
+    }
+}
+
+.seat-area.couple .seat-line .single-seat {
+    padding: 10px;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .seat-area.couple .seat-line .single-seat {
+        width: 70px;
+        padding: 4px !important;
+    }
+}
+
+.single-seat {
+    cursor: pointer;
+    position: relative;
+}
+
+    .single-seat .sit-num {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-size: 11px;
+        color: white;
+    }
+
+@media (max-width: 991px) {
+    .single-seat .sit-num {
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.single-seat:hover .sit-num {
+    display: none;
+}
+
+@media (max-width: 1270px) {
+    .screen-wrapper {
+        /*overflow-x: scroll;*/
+    }
+
+        .screen-wrapper .seat-area {
+            margin-bottom: 10px;
+        }
+
+        .screen-wrapper::-webkit-scrollbar {
+            height: 3px;
+        }
+
+    .row-num {
+        display: none;
+    }
+}
+
+.custom-button.back-button {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 7px 30px;
+}
+
+    .custom-button.back-button i {
+        margin-right: 5px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        font-size: 14px;
+        display: inline-block;
+    }
+
+.bg-one {
+    background-color: var(--gray);
+}
+/*Booking Summery*/
+.booking-summery {
+    padding: 30px;
+    border: 1px solid #11326f;
+    border-bottom-style: dashed;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    text-align: center;
+}
+#close-booking-btn{
+    display:none;
+}
+@media only screen and (min-width: 1400px) {
+    .booking-summery ul li .info {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: var(--gray);
+    }
+}
+    @media only screen and (max-width: 1400px) {
+        .booking-summery {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            z-index: 1000;
+            background-color: var(--green);
+        }
+
+        #close-booking-btn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 30px;
+            background-color: #11326f;
+            color: #ffffff;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #scroll-to-top-btn {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #11326f;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 999;
+        }
+    }
+
+    .booking-summery .title {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .booking-summery .title {
+        text-align: center;
+        border-bottom: 1px dashed #11326f;
+        padding-bottom: 23px;
+        margin-bottom: 35px;
+    }
+
+    .booking-summery ul {
+        border-bottom: 1px dashed #11326f;
+    }
+
+        .booking-summery ul li {
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+            .booking-summery ul li:first-child {
+                margin-top: 30px;
+            }
+
+            .booking-summery ul li .subtitle {
+                text-transform: uppercase;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                margin-bottom: 7px;
+            }
+
+                .booking-summery ul li .subtitle:last-child {
+                    margin-bottom: -5px !important;
+                }
+
+            .booking-summery ul li .info {
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                font-size: 11px;
+                text-transform: uppercase;
+                color: var(--black);
+            }
+
+                .booking-summery ul li .info:last-child {
+                    margin-bottom: -14px;
+                }
+
+        .booking-summery ul:last-child {
+            border-bottom: none;
+        }
+
+    @media (min-width: 576px) {
+        .booking-summery .title {
+            font-size: 28px;
+            margin-top: -9px;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .booking-summery {
+            margin-top: 0;
+        }
+    }

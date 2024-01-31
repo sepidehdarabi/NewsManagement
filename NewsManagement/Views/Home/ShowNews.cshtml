@@ -1,0 +1,64 @@
+﻿@model NewsManagement.Models.News
+
+@{
+    ViewBag.Title = "ShowNews";
+}
+
+<h2>ShowNews</h2>
+<div class="container">
+    <div class="rtl">
+        <h4>News</h4>
+        <hr />
+        <dl class="dl-horizontal ">
+            <dt>
+
+                <img src="@Model.Image" alt="Alternate Text" />
+            </dt>
+
+            <dt>
+                @Html.Label("تیتر خبر")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.Label("تیتر خبر")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Subtitle)
+            </dd>
+
+            <dt>
+                @Html.Label("خلاصه خبر")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
+
+            <dt>
+                @Html.Label("متن خبر")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Body)
+            </dd>
+
+            <dt>
+                @Html.Label("تاریخ")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateCreation)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>
